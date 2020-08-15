@@ -3,7 +3,7 @@ import requests
 import json
 
 url = "http://10.10.86.91/rest/product/search?q="
-
+# the url needs to be adjusted for each individual ip 
 def req(url, param, inj):
 	r = requests.get(url+param+inj+"--")
 	return json.dumps(r.json(), sort_keys=True, indent=4)
